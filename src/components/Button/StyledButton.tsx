@@ -73,9 +73,9 @@ const StyledButton = styled.button<ButtonProps>`
     border-color: ${getButtonVariantProp("borderColorHover")};
   }
 
-  &:focus:not(:active) {
-    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.secondary};
-  }
+  // &:focus:not(:active) {
+  //   box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.secondary};
+  // }
 
   &:active {
     background-color: ${getButtonVariantProp("backgroundActive")};

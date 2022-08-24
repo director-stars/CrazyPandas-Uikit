@@ -36,9 +36,18 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   height: ${MENU_HEIGHT}px;
   // background-color: ${({ theme }) => theme.nav.background};
   background-color: #fea726;
+  // background-color: transparent;
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
+  @media (min-width: 992px) {
+    flex: 0 0 auto;
+    padding: 0px calc(1/12*100%);
+  }
+  @media (max-width: 991px) {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
 `;
 
 const BodyWrapper = styled.div`
@@ -68,6 +77,11 @@ const StyledFlex = styled(Flex)`
   justify-content: space-between;
 `
 const StyledMenuItems = styled(MenuItems)`
+  align-items: center;
+`
+
+const StyledMenuBar = styled.div`
+  display: flex;
   align-items: center;
 `
 const Menu: React.FC<NavProps> = ({
@@ -130,16 +144,19 @@ const Menu: React.FC<NavProps> = ({
       <StyledNav showMenu={showMenu}>
         <StyledFlex>
           <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+          <StyledMenuBar>
           {!isMobile && <StyledMenuItems items={links} ml="24px" />}
+          <UserBlock account={account} login={login} logout={logout} />
+          </StyledMenuBar>
         </StyledFlex>
-        <Flex alignItems="center">
+        {/* <Flex alignItems="center">
           {!isMobile && (
             <Box mr="12px">
-              {/* <CakePrice cakePriceUsd={cakePriceUsd} /> */}
+              <CakePrice cakePriceUsd={cakePriceUsd} />
             </Box>
           )}
           <UserBlock account={account} login={login} logout={logout} />
-        </Flex>
+        </Flex> */}
       </StyledNav>
       {/* {links && <SubMenuItems items={links} mt={`${MENU_HEIGHT + 1}px`} activeItem={activeItem} />} */}
       <BodyWrapper>

@@ -28,12 +28,18 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   // color: ${({ theme, $isActive }) => ($isActive ? theme.colors.secondary : theme.colors.textSubtle)};
   color: ${({ $isActive }) => ($isActive ? "#d63341" : "#fff")};
   // font-size: 16px;
-  font-size: .875rem;
-  letter-spacing: 1px;
-  font-family: berlin-sans-regular;
+  // font-size: .875rem;
+  font-size: large;
+  // letter-spacing: 1px;
+  // font-family: berlin-sans-regular;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   // letter-spacing: .0892857143em;
-  font-weight: 600;
+  font-weight: 900;
   // font-weight: ${({ $isActive }) => ($isActive ? "600" : "400")};
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  will-change: transform;
 
   ${({ $statusColor, theme }) =>
     $statusColor &&
@@ -51,7 +57,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   ${({ $variant }) =>
     $variant === "default"
       ? `
-    padding: 0 16px;
+    // padding: 0 16px;
     height: 48px;
   `
       : `
@@ -61,8 +67,11 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
 
   &:hover {
     // background: ${({ theme }) => theme.colors.tertiary};
-    background-color: #35354720;
-    ${({ $variant }) => $variant === "default" && "border-radius: 16px;"};
+    // background-color: #35354720;
+    // ${({ $variant }) => $variant === "default" && "border-radius: 16px;"};
+    color: rgb(0, 138, 14) !important;
+    transition: all 0.5s ease-out;
+    transform: translateY(10px);
   }
 `;
 

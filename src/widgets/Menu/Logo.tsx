@@ -63,7 +63,7 @@ const Logo: React.FC<Props> = ({ isPushed, togglePush, isDark, href }) => {
     <>
       <LogoIcon className="mobile-icon" />
       <LogoWithText className="desktop-icon" isDark={isDark} />
-      <LogoText><HeaderText>ShibaGalaxy</HeaderText><BottomText>Rise of Shibas</BottomText></LogoText>
+      {/* <LogoText><HeaderText>ShibaGalaxy</HeaderText><BottomText>Crazy Pandas</BottomText></LogoText> */}
       {/* <LogoText><HeaderText>ShibaGalaxy</HeaderText><BottomText></BottomText></LogoText> */}
     </>
   );
