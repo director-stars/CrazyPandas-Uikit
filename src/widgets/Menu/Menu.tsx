@@ -35,8 +35,8 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   width: 100%;
   height: ${MENU_HEIGHT}px;
   // background-color: ${({ theme }) => theme.nav.background};
-  background-color: #fea726;
-  // background-color: transparent;
+  // background-color: #fea726;
+  background-color: transparent;
   border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
@@ -83,6 +83,7 @@ const StyledMenuItems = styled(MenuItems)`
 const StyledMenuBar = styled.div`
   display: flex;
   align-items: center;
+  column-gap: 30px;
 `
 const Menu: React.FC<NavProps> = ({
   account,
