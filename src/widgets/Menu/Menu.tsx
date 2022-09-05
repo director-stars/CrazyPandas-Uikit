@@ -37,7 +37,7 @@ const StyledNav = styled.nav<{ showMenu: boolean }>`
   // background-color: ${({ theme }) => theme.nav.background};
   // background-color: #fea726;
   background-color: transparent;
-  border-bottom: solid 2px rgba(133, 133, 133, 0.1);
+  // border-bottom: solid 2px rgba(133, 133, 133, 0.1);
   z-index: 20;
   transform: translate3d(0, 0, 0);
   @media (min-width: 992px) {

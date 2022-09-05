@@ -27,7 +27,7 @@ export const links: MenuItemsType[] = [
   {
     href: "",
     label: "Trade",
-    icon: "Doge",
+    icon: "Panda",
     items: [
       {
         label: "Exchange",
